@@ -1,0 +1,23 @@
+{
+  "name": "knockout-mutex",
+  "version": "0.1.0",
+  "authors": [
+    "W3Max"
+  ],
+  "description": "knockout-mutex",
+  "main": "src/knockout-mutex.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.2.0"
+  }
+}
