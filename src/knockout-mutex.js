@@ -22,16 +22,22 @@ define(['knockout'],
             }
         };
 
-        Mutex.prototype.tryLockAuto = function(action) {
+        Mutex.prototype.tryLockAuto = function(previousValue, action) {
             var self = this;
 
-            if (self.locked()) {
-                var subscription = self.locked.subscribe(function() {
-                    subscription.dispose();
-                    action();
-                });
-            } else {
-                action();
+            // if (self.locked()) {
+            //     var subscription = self.locked.subscribe(function() {
+            //         subscription.dispose();
+            //         return action();
+            //     });
+            // } else {
+            //      return action();
+            // }
+
+            if(!self.locked()){
+                return action();
+            }else{
+                return previousValue;
             }
         };
 
