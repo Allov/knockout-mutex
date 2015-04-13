@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/W3Max/knockout-mutex.git"
+    "url": "https://github.com/cbcrc/knockout-mutex.git"
   },
-  "author": "W3Max",
+  "author": "Maxime Séguin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/W3Max/knockout-mutex/issues"
+    "url": "https://github.com/cbcrc/knockout-mutex/issues"
   },
-  "homepage": "https://github.com/W3Max/knockout-mutex"
+  "homepage": "https://github.com/cbcrc/knockout-mutex"
 }

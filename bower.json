@@ -2,7 +2,7 @@
   "name": "knockout-mutex",
   "version": "0.1.0",
   "authors": [
-    "W3Max"
+    "Maxime Séguin"
   ],
   "description": "knockout-mutex",
   "main": "src/knockout-mutex.js",
