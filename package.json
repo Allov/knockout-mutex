@@ -1,19 +1,15 @@
 {
-  "name": "knockout-mutex",
-  "version": "0.1.0",
+  "name": "koco-mutex",
+  "version": "0.2.0",
   "description": "",
-  "main": "src/knockout-mutex.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cbcrc/knockout-mutex.git"
+    "url": "https://github.com/cbcrc/koco-mutex.git"
   },
   "author": "Maxime Séguin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cbcrc/knockout-mutex/issues"
+    "url": "https://github.com/cbcrc/koco-mutex/issues"
   },
-  "homepage": "https://github.com/cbcrc/knockout-mutex"
+  "homepage": "https://github.com/cbcrc/koco-mutex"
 }
