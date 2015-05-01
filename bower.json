@@ -1,11 +1,10 @@
 {
-  "name": "knockout-mutex",
-  "version": "0.1.0",
+  "name": "koco-mutex",
+  "version": "0.2.0",
   "authors": [
     "Maxime Séguin"
   ],
-  "description": "knockout-mutex",
-  "main": "src/knockout-mutex.js",
+  "description": "",
   "moduleType": [
     "amd"
   ],
