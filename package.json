@@ -1,16 +1,16 @@
 {
-    "name": "koco-mutex",
-    "version": "0.2.0",
-    "authors": [
-        "Maxime Séguin"
-    ],
-    "main": "src/mutex.js",
-    "scripts": {
-        "build": "rm -rf dist && mkdir dist && cp -r src/* dist && rm -rf dist/*.js && babel src --out-dir dist --modules umd --presets es2015,stage-0"
-    },
-    "description": "",
-    "license": "MIT",
-    "dependencies": {
-        "knockout": "^3.3.0"
-    }
+  "name": "koco-mutex",
+  "version": "1.0.0",
+  "authors": [
+    "Maxime Séguin"
+  ],
+  "main": "src/mutex.js",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp -r src/* dist && rm -rf dist/*.js && babel src --out-dir dist --modules umd --presets es2015,stage-0"
+  },
+  "description": "",
+  "license": "MIT",
+  "dependencies": {
+    "knockout": "^3.3.0"
+  }
 }
