@@ -2,58 +2,56 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 //TODO: Déplacer vers un bower component stand-alone
-define(['knockout'],
-    function(ko) {
-        'use strict';
+import ko from 'knockout';
 
-        function Mutex() {
-            var self = this;
 
-            self.locked = ko.observable();
-        }
+function Mutex() {
+    var self = this;
 
-        Mutex.prototype.lock = function(action) {
-            var self = this;
+    self.locked = ko.observable();
+}
 
-            if (self.locked()) {
-                var subscription = self.locked.subscribe(function() {
-                    subscription.dispose();
-                    lock(self, action);
-                });
-            } else {
-                lock(self, action);
-            }
-        };
+Mutex.prototype.lock = function(action) {
+    var self = this;
 
-        Mutex.prototype.tryLockAuto = function(previousValue, action) {
-            var self = this;
+    if (self.locked()) {
+        var subscription = self.locked.subscribe(function() {
+            subscription.dispose();
+            lock(self, action);
+        });
+    } else {
+        lock(self, action);
+    }
+};
 
-            // if (self.locked()) {
-            //     var subscription = self.locked.subscribe(function() {
-            //         subscription.dispose();
-            //         return action();
-            //     });
-            // } else {
-            //      return action();
-            // }
+Mutex.prototype.tryLockAuto = function(previousValue, action) {
+    var self = this;
 
-            if(!self.locked()){
-                return action();
-            }else{
-                return previousValue;
-            }
-        };
+    // if (self.locked()) {
+    //     var subscription = self.locked.subscribe(function() {
+    //         subscription.dispose();
+    //         return action();
+    //     });
+    // } else {
+    //      return action();
+    // }
 
-        Mutex.prototype.unlock = function() {
-            var self = this;
+    if (!self.locked()) {
+        return action();
+    } else {
+        return previousValue;
+    }
+};
 
-            self.locked(false);
-        };
+Mutex.prototype.unlock = function() {
+    var self = this;
 
-        function lock(self, action) {
-            self.locked(true);
-            action(self.unlock.bind(self));
-        }
+    self.locked(false);
+};
 
-        return Mutex;
-    });
+function lock(self, action) {
+    self.locked(true);
+    action(self.unlock.bind(self));
+}
+
+export default Mutex;
